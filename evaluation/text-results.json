@@ -1,0 +1,179 @@
+{
+  "evaluation_kind": "authored_text_regression",
+  "audio_evaluated": false,
+  "live_gnani_evaluated": false,
+  "native_speaker_reviewed": false,
+  "notice": "Passing these authored strings does not measure speech accuracy, noisy audio robustness, natural Kannada coverage, or user task success.",
+  "fixtures": "evaluation/fixtures.json",
+  "counts": {
+    "total": 20,
+    "passed": 20,
+    "supported_receipts": 7,
+    "supported_receipts_matching_all_expected_fields": 7,
+    "blocking_cases": 13,
+    "blocking_cases_held_for_review": 13,
+    "blocking_cases_incorrectly_ready_to_confirm": 0
+  },
+  "results": [
+    {
+      "id": "english_gross_tare",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "kannada_digits",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "mixed_script",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "net_only",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "fraction",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "decimal_money",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "same_repeated_value",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "conflicting_repeat",
+      "category": "conflict",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "missing_weight_unit",
+      "category": "unit",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "missing_rate",
+      "category": "missing_field",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "weight_grams",
+      "category": "unit",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "rate_per_gram",
+      "category": "unit",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "conflicting_net",
+      "category": "arithmetic",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "negative_weight",
+      "category": "number",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "tare_above_gross",
+      "category": "arithmetic",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "cancel_after_separator",
+      "category": "negation",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_half",
+      "category": "unassigned_number",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unsupported_number_compound",
+      "category": "number",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_digits",
+      "category": "unassigned_number",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "multiple_materials",
+      "category": "scope",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-23T05:02:36.347533+00:00",
+  "status": "complete",
+  "scope": "Four small synthetic development checks; not a benchmark of human or telephony performance.",
+  "provenance": {
+    "source": "Gnani Timbre v2.5 synthetic TTS",
+    "noise": "seeded simulated 10 dB whole-clip RMS Gaussian white noise",
+    "held_out": false,
+    "human_speech": false,
+    "real_telephony": false
+  },
+  "transport": "existing_loopback_backend_no_key_access",
+  "stt_model": "prisma-v2.5",
+  "api_calls_attempted": {
+    "stt": 4,
+    "tts": 0
+  },
+  "automatic_retries": 0,
+  "provider_credit_usage": "unknown",
+  "planned_clip_ids": [
+    "kn-decimal-clean",
+    "kn-correction-clean",
+    "kn-decimal-noise10db",
+    "kn-correction-noise10db"
+  ],
+  "limitations": [
+    "Same-provider synthetic TTS-to-STT loop; model/domain development examples.",
+    "No speech corpus, human listener, live users, language diversity or telephony channel is represented.",
+    "Gold is intended transaction content. Spoken corrections must remain blocked pending human review.",
+    "Parser outcomes reflect the recorded source-file hash at request time; later cached-transcript reanalysis must be separate."
+  ],
+  "count_semantics": "Current explicitly reauthorized four-clip run: attempted backend STT operations. Prior local-only connection failure is retained separately. Provider billing unknown.",
+  "successful_stt_responses": 4,
+  "previous_local_failure_history": [
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಾಗದ. ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆಜಿ. ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "12.5",
+          "tare_kg": "0.5",
+          "rate_inr_per_kg": "14"
+        },
+        "computed": {
+          "net_kg": "12",
+          "total_inr": "168.00"
+        },
+        "must_block": false
+      },
+      "provider_original_sha256": "8b28de2e9068891ba90f7a880e482d31d83119c3c64cc7465363d02468aa6144",
+      "id": "kn-decimal-clean",
+      "input": {
+        "filename": "kn-decimal-clean.wav",
+        "sha256": "ada397d9dbd63c0744a643ece46d4b87058cf5e77f09bf4f518ca88acf21b7a4",
+        "bytes": 209998,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 6.56
+      },
+      "transform": {
+        "type": "provider_tts_normalized_to_pcm16_mono_16khz_by_root",
+        "additional_noise": false
+      },
+      "requested_at_utc": "2026-10-23T05:02:36.458170+00:00",
+      "parser_source_sha256": "dffcb8bf3e9e78ee3cd20db83393cd24f878304c7568f3c8b57da2c2b9a6f8d7",
+      "status": "error",
+      "error": {
+        "status": "error",
+        "code": "backend_connection_error",
+        "http_status": null,
+        "measured_elapsed_ms": 2058
+      }
+    }
+  ],
+  "results": [
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಾಗದ. ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆಜಿ. ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "12.5",
+          "tare_kg": "0.5",
+          "rate_inr_per_kg": "14"
+        },
+        "computed": {
+          "net_kg": "12",
+          "total_inr": "168.00"
+        },
+        "must_block": false
+      },
+      "provider_original_sha256": "8b28de2e9068891ba90f7a880e482d31d83119c3c64cc7465363d02468aa6144",
+      "id": "kn-decimal-clean",
+      "input": {
+        "filename": "kn-decimal-clean.wav",
+        "sha256": "ada397d9dbd63c0744a643ece46d4b87058cf5e77f09bf4f518ca88acf21b7a4",
+        "bytes": 209998,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 6.56
+      },
+      "transform": {
+        "type": "provider_tts_normalized_to_pcm16_mono_16khz_by_root",
+        "additional_noise": false
+      },
+      "requested_at_utc": "2026-10-23T05:06:01.491689+00:00",
+      "parser_source_sha256": "dffcb8bf3e9e78ee3cd20db83393cd24f878304c7568f3c8b57da2c2b9a6f8d7",
+      "status": "success",
+      "actual_response": {
+        "raw_transcript": "ಕಾಗದ ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆ ಜಿ ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆ ಜಿ ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+        "model": "prisma-v2.5",
+        "adapter_elapsed_ms": 9820,
+        "measured_elapsed_ms": 9833
+      },
+      "parser_outcome": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": null,
+          "rate_inr_per_kg": null
+        },
+        "computed": {
+          "net_kg": null,
+          "total_inr": null
+        },
+        "issues": [
+          "Review extra words after gross_kg: ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆ ಜಿ",
+          "Could not safely parse gross_kg; say a labelled number and explicit unit.",
+          "Review extra words after tare_kg: ಅರ್ಧ ಕೆ ಜಿ",
+          "Could not safely parse tare_kg; say a labelled number and explicit unit.",
+          "Review extra words after rate_inr_per_kg: ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+          "Could not safely parse rate_inr_per_kg; say a labelled number and explicit unit.",
+          "Unassigned number words remain in the transcript. Resolve them explicitly.",
+          "Unassigned words remain in the transcript. Check for cancellation, corrections or another item.",
+          "Unassigned symbols remain in the transcript. Review currency, arithmetic or cancellation marks.",
+          "Provide net kg, or both gross kg and tare kg. No weight is assumed.",
+          "Provide a positive INR-per-kg rate."
+        ],
+        "blocked": true,
+        "confirmed": false
+      },
+      "gold_comparison": {
+        "status": "compared",
+        "checks": [
+          {
+            "field": "fields.material",
+            "expected": "paper",
+            "actual": "paper",
+            "match": true
+          },
+          {
+            "field": "fields.gross_kg",
+            "expected": "12.5",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.tare_kg",
+            "expected": "0.5",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.rate_inr_per_kg",
+            "expected": "14",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.net_kg",
+            "expected": "12",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.total_inr",
+            "expected": "168.00",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "must_block",
+            "expected": false,
+            "actual": true,
+            "match": false
+          }
+        ],
+        "all_match": false
+      }
+    },
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಬ್ಬಿಣ. ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಎರಡು ಕೆಜಿ. ದರ ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ. ಅಲ್ಲ. ದರ ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "50"
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": "1150.00"
+        },
+        "must_block": true
+      },
+      "provider_original_sha256": "bff63cab3f7822d13f378d5b74131f9f19cfb6ac5913e36f88860c8e3418e65e",
+      "id": "kn-correction-clean",
+      "input": {
+        "filename": "kn-correction-clean.wav",
+        "sha256": "f7bd273c6c2c17241b34f7f9d903c613ce183f9f3820f9435aca24427b3fdc75",
+        "bytes": 271438,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 8.48
+      },
+      "transform": {
+        "type": "provider_tts_normalized_to_pcm16_mono_16khz_by_root",
+        "additional_noise": false
+      },
+      "requested_at_utc": "2026-10-23T05:06:37.006488+00:00",
+      "parser_source_sha256": "dffcb8bf3e9e78ee3cd20db83393cd24f878304c7568f3c8b57da2c2b9a6f8d7",
+      "status": "success",
+      "actual_response": {
+        "raw_transcript": "ಕಬ್ಬಿಣ ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆ ಜಿ ಚೀಲದ ತೂಕ ಎರಡು ಕೆ ಜಿ ದರ ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ ಅಲ್ಲ ದರ ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+        "model": "prisma-v2.5",
+        "adapter_elapsed_ms": 5310,
+        "measured_elapsed_ms": 5342
+      },
+      "parser_outcome": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": null,
+          "rate_inr_per_kg": null
+        },
+        "computed": {
+          "net_kg": null,
+          "total_inr": null
+        },
+        "issues": [
+          "Review extra words after gross_kg: ಇಪ್ಪತ್ತೈದು ಕೆ ಜಿ",
+          "Could not safely parse gross_kg; say a labelled number and explicit unit.",
+          "Review extra words after tare_kg: ಎರಡು ಕೆ ಜಿ",
+          "Could not safely parse tare_kg; say a labelled number and explicit unit.",
+          "Review extra words after rate_inr_per_kg: ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ ಅಲ್ಲ",
+          "Could not safely parse rate_inr_per_kg; say a labelled number and explicit unit.",
+          "Review extra words after rate_inr_per_kg: ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+          "Spoken correction or negation detected. Review and explicitly resolve the affected field.",
+          "Unassigned number words remain in the transcript. Resolve them explicitly.",
+          "Unassigned words remain in the transcript. Check for cancellation, corrections or another item.",
+          "Unassigned symbols remain in the transcript. Review currency, arithmetic or cancellation marks.",
+          "Provide net kg, or both gross kg and tare kg. No weight is assumed.",
+          "Provide a positive INR-per-kg rate."
+        ],
+        "blocked": true,
+        "confirmed": false
+      },
+      "gold_comparison": {
+        "status": "compared",
+        "checks": [
+          {
+            "field": "fields.material",
+            "expected": "iron",
+            "actual": "iron",
+            "match": true
+          },
+          {
+            "field": "fields.gross_kg",
+            "expected": "25",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.tare_kg",
+            "expected": "2",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.rate_inr_per_kg",
+            "expected": "50",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.net_kg",
+            "expected": "23",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.total_inr",
+            "expected": "1150.00",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "must_block",
+            "expected": true,
+            "actual": true,
+            "match": true
+          }
+        ],
+        "all_match": false
+      }
+    },
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಾಗದ. ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆಜಿ. ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "12.5",
+          "tare_kg": "0.5",
+          "rate_inr_per_kg": "14"
+        },
+        "computed": {
+          "net_kg": "12",
+          "total_inr": "168.00"
+        },
+        "must_block": false
+      },
+      "provider_original_sha256": "8b28de2e9068891ba90f7a880e482d31d83119c3c64cc7465363d02468aa6144",
+      "id": "kn-decimal-noise10db",
+      "input": {
+        "filename": "kn-decimal-noise10db.wav",
+        "sha256": "b2c626eefd29773528d70019eb482559fdb300848732e68e8cdd593e823bee36",
+        "bytes": 209964,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 6.56
+      },
+      "transform": {
+        "type": "simulated_additive_white_gaussian_noise",
+        "pseudorandom_seed": 23261001,
+        "target_whole_clip_rms_snr_db": 10,
+        "measured_whole_clip_rms_snr_db": 9.995370110525698,
+        "signal_rms_pcm_units": 3965.481408526832,
+        "noise_target_std_pcm_units": 1253.9953269997438,
+        "uniform_peak_normalization_gain": 1.0,
+        "clipped_samples": 0,
+        "sample_rate_changed": false,
+        "telephony_codec_applied": false,
+        "note": "Seeded synthetic white noise; not recorded ambient noise, human speech or real telephony.",
+        "source_normalized_sha256": "ada397d9dbd63c0744a643ece46d4b87058cf5e77f09bf4f518ca88acf21b7a4"
+      },
+      "requested_at_utc": "2026-10-23T05:06:42.710584+00:00",
+      "parser_source_sha256": "dffcb8bf3e9e78ee3cd20db83393cd24f878304c7568f3c8b57da2c2b9a6f8d7",
+      "status": "success",
+      "actual_response": {
+        "raw_transcript": "ಕಾಗದ ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆ ಜಿ ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆ ಜಿ ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+        "model": "prisma-v2.5",
+        "adapter_elapsed_ms": 3679,
+        "measured_elapsed_ms": 3691
+      },
+      "parser_outcome": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": null,
+          "rate_inr_per_kg": null
+        },
+        "computed": {
+          "net_kg": null,
+          "total_inr": null
+        },
+        "issues": [
+          "Review extra words after gross_kg: ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆ ಜಿ",
+          "Could not safely parse gross_kg; say a labelled number and explicit unit.",
+          "Review extra words after tare_kg: ಅರ್ಧ ಕೆ ಜಿ",
+          "Could not safely parse tare_kg; say a labelled number and explicit unit.",
+          "Review extra words after rate_inr_per_kg: ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+          "Could not safely parse rate_inr_per_kg; say a labelled number and explicit unit.",
+          "Unassigned number words remain in the transcript. Resolve them explicitly.",
+          "Unassigned words remain in the transcript. Check for cancellation, corrections or another item.",
+          "Unassigned symbols remain in the transcript. Review currency, arithmetic or cancellation marks.",
+          "Provide net kg, or both gross kg and tare kg. No weight is assumed.",
+          "Provide a positive INR-per-kg rate."
+        ],
+        "blocked": true,
+        "confirmed": false
+      },
+      "gold_comparison": {
+        "status": "compared",
+        "checks": [
+          {
+            "field": "fields.material",
+            "expected": "paper",
+            "actual": "paper",
+            "match": true
+          },
+          {
+            "field": "fields.gross_kg",
+            "expected": "12.5",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.tare_kg",
+            "expected": "0.5",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.rate_inr_per_kg",
+            "expected": "14",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.net_kg",
+            "expected": "12",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.total_inr",
+            "expected": "168.00",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "must_block",
+            "expected": false,
+            "actual": true,
+            "match": false
+          }
+        ],
+        "all_match": false
+      }
+    },
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಬ್ಬಿಣ. ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಎರಡು ಕೆಜಿ. ದರ ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ. ಅಲ್ಲ. ದರ ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "50"
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": "1150.00"
+        },
+        "must_block": true
+      },
+      "provider_original_sha256": "bff63cab3f7822d13f378d5b74131f9f19cfb6ac5913e36f88860c8e3418e65e",
+      "id": "kn-correction-noise10db",
+      "input": {
+        "filename": "kn-correction-noise10db.wav",
+        "sha256": "318c8d8e6ed8cce0e606671c915eb8f02034039a7cf7d5da2e79ecdbe302719c",
+        "bytes": 271404,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 8.48
+      },
+      "transform": {
+        "type": "simulated_additive_white_gaussian_noise",
+        "pseudorandom_seed": 23261002,
+        "target_whole_clip_rms_snr_db": 10,
+        "measured_whole_clip_rms_snr_db": 10.02719451448969,
+        "signal_rms_pcm_units": 3783.6790178881242,
+        "noise_target_std_pcm_units": 1196.5043631515448,
+        "uniform_peak_normalization_gain": 1.0,
+        "clipped_samples": 0,
+        "sample_rate_changed": false,
+        "telephony_codec_applied": false,
+        "note": "Seeded synthetic white noise; not recorded ambient noise, human speech or real telephony.",
+        "source_normalized_sha256": "f7bd273c6c2c17241b34f7f9d903c613ce183f9f3820f9435aca24427b3fdc75"
+      },
+      "requested_at_utc": "2026-10-23T05:06:46.527620+00:00",
+      "parser_source_sha256": "dffcb8bf3e9e78ee3cd20db83393cd24f878304c7568f3c8b57da2c2b9a6f8d7",
+      "status": "success",
+      "actual_response": {
+        "raw_transcript": "ಕಬ್ಬಿಣ ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆ ಜಿ ಚೀಲದ ತೂಕ ಎರಡು ಕೆ ಜಿ ದರ ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ ಅಲ್ಲ ದರ ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+        "model": "prisma-v2.5",
+        "adapter_elapsed_ms": 3045,
+        "measured_elapsed_ms": 3060
+      },
+      "parser_outcome": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": null,
+          "rate_inr_per_kg": null
+        },
+        "computed": {
+          "net_kg": null,
+          "total_inr": null
+        },
+        "issues": [
+          "Review extra words after gross_kg: ಇಪ್ಪತ್ತೈದು ಕೆ ಜಿ",
+          "Could not safely parse gross_kg; say a labelled number and explicit unit.",
+          "Review extra words after tare_kg: ಎರಡು ಕೆ ಜಿ",
+          "Could not safely parse tare_kg; say a labelled number and explicit unit.",
+          "Review extra words after rate_inr_per_kg: ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ ಅಲ್ಲ",
+          "Could not safely parse rate_inr_per_kg; say a labelled number and explicit unit.",
+          "Review extra words after rate_inr_per_kg: ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+          "Spoken correction or negation detected. Review and explicitly resolve the affected field.",
+          "Unassigned number words remain in the transcript. Resolve them explicitly.",
+          "Unassigned words remain in the transcript. Check for cancellation, corrections or another item.",
+          "Unassigned symbols remain in the transcript. Review currency, arithmetic or cancellation marks.",
+          "Provide net kg, or both gross kg and tare kg. No weight is assumed.",
+          "Provide a positive INR-per-kg rate."
+        ],
+        "blocked": true,
+        "confirmed": false
+      },
+      "gold_comparison": {
+        "status": "compared",
+        "checks": [
+          {
+            "field": "fields.material",
+            "expected": "iron",
+            "actual": "iron",
+            "match": true
+          },
+          {
+            "field": "fields.gross_kg",
+            "expected": "25",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.tare_kg",
+            "expected": "2",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "fields.rate_inr_per_kg",
+            "expected": "50",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.net_kg",
+            "expected": "23",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "computed.total_inr",
+            "expected": "1150.00",
+            "actual": null,
+            "match": false
+          },
+          {
+            "field": "must_block",
+            "expected": true,
+            "actual": true,
+            "match": true
+          }
+        ],
+        "all_match": false
+      }
+    }
+  ],
+  "previous_local_operations_attempted": {
+    "stt": 1,
+    "tts": 0
+  },
+  "new_external_state": "Root restored and verified the detached configured backend; explicitly authorized four new STT requests.",
+  "resumed_at_utc": "2026-10-23T05:06:01.383102+00:00",
+  "finished_at_utc": "2026-10-23T05:06:49.609937+00:00"
+}

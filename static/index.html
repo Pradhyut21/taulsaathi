@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12594d">
+  <title>TaulSaathi — A clear record of every kilo</title>
+  <meta name="description" content="An experimental voice-to-record assistant for scrap weighing conversations. Review the weight, rate and calculation before confirming a record.">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="TaulSaathi home">
+      <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 6v20M7 26h18M6 11h20M9 11l-5 9h10l-5-9Zm14 0-5 9h10l-5-9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="16" cy="6" r="2.5" fill="currentColor"/></svg></span>
+      <span>TaulSaathi<span class="brand-sub" lang="kn">ತೂಕ ಸಾಥಿ</span></span>
+    </a>
+    <div class="header-meta"><span class="experiment-label">RESEARCH PROTOTYPE</span><span id="connection-badge" class="connection"><span class="dot"></span>Checking connection</span></div>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">A SMALL RECORD. A CLEARER AGREEMENT.</p><h1 id="page-title">Every kilo.<br><span>Clearly agreed.</span></h1><p class="intro-copy">Turn a weighing conversation into a checked record.<br class="desktop-break"> Review the weight, hear the calculation, then confirm.</p><p class="kannada-line" lang="kn">ತೂಕ · ದರ · ಲೆಕ್ಕ</p></div>
+      <div class="workflow-note"><span class="note-number">01 → 02 → 03</span><p>Say it.<br>Check it.<br><strong>Keep a record.</strong></p><span class="note-foot">Built with Gnani speech APIs</span></div>
+    </section>
+
+    <div id="status-message" class="status-banner" role="status" aria-live="polite">Connecting to the local app…</div>
+    <div id="error-message" class="error-banner" role="alert" hidden></div>
+
+    <div class="workspace">
+      <section class="panel input-panel" aria-labelledby="capture-heading">
+        <div class="panel-heading"><span class="step-marker">01</span><div><p class="eyebrow">CAPTURE</p><h2 id="capture-heading">The weighing conversation</h2></div></div>
+        <p class="panel-description">One material at a time. This prototype needs labelled weights and a rate with units. Start with a scenario to see the supported format.</p>
+        <div class="language-row"><label for="language">Conversation language</label><select id="language"><option value="kn-IN">ಕನ್ನಡ · Kannada</option><option value="en-IN">English</option></select></div>
+
+        <div class="example-section"><span class="small-label">TRY A SYNTHETIC SCENARIO</span><div id="examples" class="example-list"><span class="muted small">Loading scenarios…</span></div></div>
+
+        <div class="textarea-header"><label for="transcript">Conversation text</label><button id="clear-input" type="button" class="text-button">Start fresh</button></div>
+        <textarea id="transcript" rows="7" placeholder="Paper, gross 12.5 kg, tare 0.5 kg, rate 14 rupees per kg." spellcheck="false" aria-describedby="source-note" maxlength="4000"></textarea>
+        <p id="source-note" class="source-note">Typed input · no speech API call</p>
+        <button id="create-draft" class="button primary full-width" type="button"><span>Create a draft record</span><span aria-hidden="true">→</span></button>
+        <p class="micro-note">Drafting text uses local rules. Speech calls are separate and use programme credits.</p>
+
+        <details class="audio-section"><summary><span class="audio-symbol" aria-hidden="true">≋</span><span>Use a real voice recording<small>WAV upload → Gnani speech to text</small></span><span class="details-plus" aria-hidden="true">+</span></summary><div class="audio-content"><p class="small muted">Upload a consenting speaker’s WAV recording. Transcription is sent to Gnani. Review the returned text before drafting.</p><label class="file-label" for="audio-file">Choose a WAV file</label><input id="audio-file" type="file" accept=".wav,audio/wav,audio/x-wav"><p id="file-note" class="small muted">No recording selected.</p><button id="transcribe" class="button secondary full-width" type="button" disabled>Transcribe with Gnani · uses credits</button><p id="transcription-meta" class="micro-note" aria-live="polite"></p></div></details>
+      </section>
+
+      <section class="panel record-panel" aria-labelledby="record-heading">
+        <div class="panel-heading"><span class="step-marker">02</span><div><p class="eyebrow">REVIEW & CONFIRM</p><h2 id="record-heading">A record you can check</h2></div><span id="record-status" class="record-status">No draft yet</span></div>
+
+        <div id="empty-state" class="empty-state"><div class="receipt-illustration" aria-hidden="true"><div class="receipt-top">TaulSaathi</div><div class="receipt-rule"></div><div class="receipt-line"><span></span><span></span></div><div class="receipt-line"><span></span><span></span></div><div class="receipt-line"><span></span><span></span></div><div class="receipt-rule"></div><div class="receipt-total">₹ —</div><span class="receipt-check">✓</span></div><h3>Clarity starts with a draft.</h3><p>The material, weight and rate appear here.<br>Nothing is confirmed until you review it.</p><span class="empty-caption">A record of what was entered.<br>Weighing accuracy remains yours to check.</span></div>
+
+        <div id="draft-content" hidden>
+          <div class="draft-meta"><span id="draft-id"></span><span id="revision-label"></span><span id="draft-source"></span></div>
+          <p id="draft-input-note" class="draft-input-note" hidden>The conversation or language changed. Create a new draft to review this input.</p>
+          <div id="issues-box" class="issues-box" hidden><h3>Check before continuing</h3><ul id="issues-list"></ul></div>
+          <div class="field-grid" id="fields">
+            <div class="field-row material-row"><label for="field-material">Material <span lang="kn">ವಸ್ತು</span></label><div class="field-input-group"><select id="field-material" data-field="material"><option value="">Select a material</option><option value="paper">Paper · ಕಾಗದ</option><option value="plastic">Plastic · ಪ್ಲಾಸ್ಟಿಕ್</option><option value="iron">Iron · ಕಬ್ಬಿಣ</option><option value="cardboard">Cardboard · ರಟ್ಟು</option><option value="aluminium">Aluminium · ಅಲ್ಯೂಮಿನಿಯಂ</option><option value="copper">Copper · ತಾಮ್ರ</option></select><button data-apply="material" class="correction-button" type="button" disabled>Apply</button></div></div>
+            <div class="field-row"><label for="field-gross_kg">Gross weight <span>kg · incl. container</span></label><div class="field-input-group"><input id="field-gross_kg" data-field="gross_kg" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><button data-apply="gross_kg" class="correction-button" type="button" disabled>Apply</button></div></div>
+            <div class="field-row"><label for="field-tare_kg">Container weight <span>kg · tare</span></label><div class="field-input-group"><input id="field-tare_kg" data-field="tare_kg" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><button data-apply="tare_kg" class="correction-button" type="button" disabled>Apply</button></div></div>
+            <div class="field-row"><label for="field-net_kg">Stated net weight <span>kg · optional if calculated</span></label><div class="field-input-group"><input id="field-net_kg" data-field="net_kg" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><button data-apply="net_kg" class="correction-button" type="button" disabled>Apply</button></div></div>
+            <div class="field-row"><label for="field-rate_inr_per_kg">Agreed rate <span>₹ per kg</span></label><div class="field-input-group"><input id="field-rate_inr_per_kg" data-field="rate_inr_per_kg" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><button data-apply="rate_inr_per_kg" class="correction-button" type="button" disabled>Apply</button></div></div>
+          </div>
+          <div class="correction-reason"><label for="correction-reason">Reason for correction</label><input id="correction-reason" type="text" placeholder="For example: checked the scale again" maxlength="300"><p id="unsaved-note" class="micro-note" hidden>Apply your field changes before reviewing this revision.</p></div>
+          <div id="warning-review" class="warning-review" hidden><h3>Resolve transcript warnings</h3><p>Apply corrections first, then check every warning against the original transcript below. This step does not fill missing fields.</p><label class="review-checkbox"><input id="transcript-reviewed" type="checkbox"><span>I checked the full transcript and every flagged detail.</span></label><label class="small-label" for="warning-reason">How did you check?</label><input id="warning-reason" type="text" minlength="8" maxlength="300" placeholder="Explain the intended numbers or correction"><button id="resolve-warnings" type="button" class="button secondary full-width" disabled>Resolve transcript warnings</button></div>
+          <div class="calculation"><div><span class="small-label">NET WEIGHT</span><strong id="net-total">—<small> kg</small></strong></div><span class="calculation-times" aria-hidden="true">×</span><div><span class="small-label">AGREED RATE</span><strong id="rate-total">—<small> / kg</small></strong></div><span class="calculation-equals" aria-hidden="true">=</span><div class="amount-cell"><span class="small-label">RECORDED AMOUNT</span><strong id="amount-total">₹ —</strong></div></div>
+          <div class="readback"><div class="readback-heading"><span class="small-label">THE COMPLETE READBACK</span><button id="readback" class="text-button" type="button" disabled><span aria-hidden="true">◖))</span> Hear with Gnani</button></div><p id="readback-text"></p><audio id="readback-audio" controls hidden></audio><p id="readback-note" class="micro-note">Live voice readback uses credits. The text is always available above.</p></div>
+          <div id="review-section" class="review-section"><label class="review-checkbox"><input id="reviewed" type="checkbox"><span>I checked the weight, rate and amount in this revision.</span></label><p class="micro-note">A correction creates a new revision and needs a new review.</p><button id="confirm" class="button primary full-width" type="button" disabled><span>Confirm this revision</span><span aria-hidden="true">✓</span></button></div>
+          <div id="confirmed-section" class="confirmed-section" hidden><div class="confirmed-heading"><span aria-hidden="true">✓</span><div><strong>Revision confirmed</strong><p>This records a review. It does not verify a scale, identity or payment.</p></div></div><div class="confirmed-actions"><a id="download-receipt" class="button secondary" href="#" download>Download record · JSON</a><button id="print-record" class="button secondary" type="button">Print record</button></div></div>
+          <details class="provenance"><summary>Source evidence & correction history <span aria-hidden="true">↗</span></summary><h3>Extracted evidence</h3><div id="evidence-list"></div><h3>Revision history</h3><ol id="history-list"></ol><h3>Original transcript</h3><p id="original-transcript" class="original-transcript"></p></details>
+        </div>
+      </section>
+    </div>
+    <footer><p><strong>Clear numbers. Human decisions.</strong><span>This prototype records entered information. It does not set market rates, verify weighing or move money.</span></p><span class="footer-mark">TaulSaathi / 2026</span></footer>
+  </main>
+</body>
+</html>

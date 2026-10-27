@@ -1,0 +1,366 @@
+{
+  "fixture_kind": "authored_adversarial_text_regression",
+  "native_speaker_reviewed": false,
+  "audio_included": false,
+  "description": "Thirty additional authored cases, separate from the initial twenty. Expected arithmetic was specified independently. No live speech recognition, people, consent or recordings are represented.",
+  "cases": [
+    {
+      "id": "signed_compound_weight",
+      "category": "negative_sign",
+      "language": "en-IN",
+      "text": "paper net - fifty five kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "spaced_subtraction_weight",
+      "category": "subtraction_ambiguity",
+      "language": "en-IN",
+      "text": "paper net fifty - five kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "double_hyphen_weight",
+      "category": "number_ambiguity",
+      "language": "en-IN",
+      "text": "paper net fifty--five kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "trailing_hyphen_weight",
+      "category": "number_ambiguity",
+      "language": "en-IN",
+      "text": "paper net fifty-five- kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "signed_compound_rate",
+      "category": "negative_sign",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate - thirty five per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unicode_minus_weight",
+      "category": "negative_sign",
+      "language": "en-IN",
+      "text": "paper net − fifty five kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "ascii_plus_weight",
+      "category": "unsupported_numeric_syntax",
+      "language": "en-IN",
+      "text": "paper net +50 kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "scientific_notation_weight",
+      "category": "unsupported_numeric_syntax",
+      "language": "en-IN",
+      "text": "paper net 5e1 kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "thousands_separator_weight",
+      "category": "unsupported_numeric_syntax",
+      "language": "en-IN",
+      "text": "paper net 1,000 kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "comma_decimal_weight",
+      "category": "decimal_ambiguity",
+      "language": "en-IN",
+      "text": "paper net 2,5 kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unsupported_decimal_mark",
+      "category": "decimal_ambiguity",
+      "language": "kn-IN",
+      "text": "ಕಾಗದ net ೨٫೫ kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "four_decimal_places_weight",
+      "category": "precision_limit",
+      "language": "en-IN",
+      "text": "paper net 0.0001 kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "value_above_prototype_limit",
+      "category": "range_limit",
+      "language": "en-IN",
+      "text": "paper net 100000.001 kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "rate_per_thousand_grams",
+      "category": "unsupported_unit_conversion",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty per 1000 grams",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "currency_usd",
+      "category": "currency_conflict",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty USD per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "zero_width_before_unit",
+      "category": "unrecognized_token_boundary",
+      "language": "en-IN",
+      "text": "paper net fifty​kg rate thirty per kg",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unassigned_dollar_symbol",
+      "category": "unassigned_symbol",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty per kg; $",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unassigned_rupee_symbol",
+      "category": "unassigned_symbol",
+      "language": "kn-IN",
+      "text": "ಕಾಗದ net fifty kg rate thirty per kg; ₹",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unassigned_plus_symbol",
+      "category": "unassigned_symbol",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty per kg; +",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unassigned_cancel_mark",
+      "category": "unassigned_symbol",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty per kg; ❌",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unassigned_percent_symbol",
+      "category": "unassigned_symbol",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty per kg; %",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "unassigned_equals_symbol",
+      "category": "unassigned_symbol",
+      "language": "en-IN",
+      "text": "paper net fifty kg rate thirty per kg; =",
+      "expected": {
+        "can_confirm": false
+      }
+    },
+    {
+      "id": "attached_english_compound",
+      "category": "supported_receipt",
+      "language": "en-IN",
+      "text": "paper net fifty-five kg rate thirty per kg",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "paper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": "55",
+          "rate_inr_per_kg": "30"
+        },
+        "computed": {
+          "net_kg": "55",
+          "total_inr": "1650.00"
+        }
+      }
+    },
+    {
+      "id": "attached_compound_tare",
+      "category": "supported_receipt",
+      "language": "en-IN",
+      "text": "paper gross sixty kg tare twenty-one kg rate thirty per kg",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "paper",
+          "gross_kg": "60",
+          "tare_kg": "21",
+          "net_kg": null,
+          "rate_inr_per_kg": "30"
+        },
+        "computed": {
+          "net_kg": "39",
+          "total_inr": "1170.00"
+        }
+      }
+    },
+    {
+      "id": "mixed_script_decimal",
+      "category": "supported_receipt",
+      "language": "kn-IN",
+      "text": "ಕಾಗದ net ೫೦.25 kg rate 12.5 per kg",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "paper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": "50.25",
+          "rate_inr_per_kg": "12.5"
+        },
+        "computed": {
+          "net_kg": "50.25",
+          "total_inr": "628.13"
+        }
+      }
+    },
+    {
+      "id": "kannada_decimal_arithmetic",
+      "category": "supported_receipt",
+      "language": "kn-IN",
+      "text": "ತಾಮ್ರ ನಿವ್ವಳ ತೂಕ ೧.೨೫ ಕೆಜಿ ದರ ೨.೪ ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "copper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": "1.25",
+          "rate_inr_per_kg": "2.4"
+        },
+        "computed": {
+          "net_kg": "1.25",
+          "total_inr": "3.00"
+        }
+      }
+    },
+    {
+      "id": "small_gross_tare_difference",
+      "category": "supported_receipt",
+      "language": "en-IN",
+      "text": "copper gross 1.001 kg tare 1 kg rate 99999.999 per kg",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "copper",
+          "gross_kg": "1.001",
+          "tare_kg": "1",
+          "net_kg": null,
+          "rate_inr_per_kg": "99999.999"
+        },
+        "computed": {
+          "net_kg": "0.001",
+          "total_inr": "100.00"
+        }
+      }
+    },
+    {
+      "id": "out_of_order_consistent_inputs",
+      "category": "supported_receipt",
+      "language": "en-IN",
+      "text": "paper rate thirty per kg tare zero kg net fifty kg gross fifty kg",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "paper",
+          "gross_kg": "50",
+          "tare_kg": "0",
+          "net_kg": "50",
+          "rate_inr_per_kg": "30"
+        },
+        "computed": {
+          "net_kg": "50",
+          "total_inr": "1500.00"
+        }
+      }
+    },
+    {
+      "id": "label_equals_and_currency_prefix",
+      "category": "supported_receipt",
+      "language": "en-IN",
+      "text": "paper; net = 12.5 kg; rate: ₹ 40 / kg.",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "paper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": "12.5",
+          "rate_inr_per_kg": "40"
+        },
+        "computed": {
+          "net_kg": "12.5",
+          "total_inr": "500.00"
+        }
+      }
+    },
+    {
+      "id": "indic_danda_separator",
+      "category": "supported_receipt",
+      "language": "kn-IN",
+      "text": "ಕಾಗದ ನಿವ್ವಳ ತೂಕ ೨೫ ಕೆಜಿ। ದರ ೨೦ ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ।",
+      "expected": {
+        "can_confirm": true,
+        "fields": {
+          "material": "paper",
+          "gross_kg": null,
+          "tare_kg": null,
+          "net_kg": "25",
+          "rate_inr_per_kg": "20"
+        },
+        "computed": {
+          "net_kg": "25",
+          "total_inr": "500.00"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "evaluation_kind": "authored_text_regression",
+  "audio_evaluated": false,
+  "live_gnani_evaluated": false,
+  "native_speaker_reviewed": false,
+  "notice": "Passing these authored strings does not measure speech accuracy, noisy audio robustness, natural Kannada coverage, or user task success.",
+  "fixtures": "evaluation/adversarial-fixtures.json",
+  "counts": {
+    "total": 30,
+    "passed": 30,
+    "supported_receipts": 8,
+    "supported_receipts_matching_all_expected_fields": 8,
+    "blocking_cases": 22,
+    "blocking_cases_held_for_review": 22,
+    "blocking_cases_incorrectly_ready_to_confirm": 0
+  },
+  "results": [
+    {
+      "id": "signed_compound_weight",
+      "category": "negative_sign",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "spaced_subtraction_weight",
+      "category": "subtraction_ambiguity",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "double_hyphen_weight",
+      "category": "number_ambiguity",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "trailing_hyphen_weight",
+      "category": "number_ambiguity",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "signed_compound_rate",
+      "category": "negative_sign",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unicode_minus_weight",
+      "category": "negative_sign",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "ascii_plus_weight",
+      "category": "unsupported_numeric_syntax",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "scientific_notation_weight",
+      "category": "unsupported_numeric_syntax",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "thousands_separator_weight",
+      "category": "unsupported_numeric_syntax",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "comma_decimal_weight",
+      "category": "decimal_ambiguity",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unsupported_decimal_mark",
+      "category": "decimal_ambiguity",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "four_decimal_places_weight",
+      "category": "precision_limit",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "value_above_prototype_limit",
+      "category": "range_limit",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "rate_per_thousand_grams",
+      "category": "unsupported_unit_conversion",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "currency_usd",
+      "category": "currency_conflict",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "zero_width_before_unit",
+      "category": "unrecognized_token_boundary",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_dollar_symbol",
+      "category": "unassigned_symbol",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_rupee_symbol",
+      "category": "unassigned_symbol",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_plus_symbol",
+      "category": "unassigned_symbol",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_cancel_mark",
+      "category": "unassigned_symbol",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_percent_symbol",
+      "category": "unassigned_symbol",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "unassigned_equals_symbol",
+      "category": "unassigned_symbol",
+      "passed": true,
+      "expected_confirmable": false,
+      "actual_confirmable": false,
+      "mismatches": []
+    },
+    {
+      "id": "attached_english_compound",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "attached_compound_tare",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "mixed_script_decimal",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "kannada_decimal_arithmetic",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "small_gross_tare_difference",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "out_of_order_consistent_inputs",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "label_equals_and_currency_prefix",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    },
+    {
+      "id": "indic_danda_separator",
+      "category": "supported_receipt",
+      "passed": true,
+      "expected_confirmable": true,
+      "actual_confirmable": true,
+      "mismatches": []
+    }
+  ]
+}

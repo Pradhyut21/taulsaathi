@@ -1,0 +1,83 @@
+{
+  "id": "703f15a50a6e4101816fe4d672c43c7e",
+  "revision": 1,
+  "status": "confirmed",
+  "language": "kn-IN",
+  "transcript": "ಕಾಗದ ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆ ಜಿ ಚೀಲದ ತೂಕ ಎರಡು ಕೆ ಜಿ ದರ ಇಪ್ಪತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+  "source": "gnani",
+  "fields": {
+    "material": "paper",
+    "gross_kg": "25",
+    "tare_kg": "2",
+    "net_kg": null,
+    "rate_inr_per_kg": "20"
+  },
+  "evidence": [
+    {
+      "field": "material",
+      "raw": "ಕಾಗದ",
+      "value": "paper",
+      "start": 0,
+      "end": 4
+    },
+    {
+      "field": "gross_kg",
+      "raw": "ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆ ಜಿ",
+      "value": "25",
+      "start": 5,
+      "end": 31
+    },
+    {
+      "field": "tare_kg",
+      "raw": "ಚೀಲದ ತೂಕ ಎರಡು ಕೆ ಜಿ",
+      "value": "2",
+      "start": 32,
+      "end": 51
+    },
+    {
+      "field": "rate_inr_per_kg",
+      "raw": "ದರ ಇಪ್ಪತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆ ಜಿ",
+      "value": "20",
+      "start": 52,
+      "end": 82
+    }
+  ],
+  "parse_issues": [],
+  "history": [
+    {
+      "action": "created",
+      "detail": "Source: gnani",
+      "revision": 1
+    },
+    {
+      "action": "confirmed",
+      "detail": "Operator reviewed this exact revision; no payment executed.",
+      "revision": 1
+    }
+  ],
+  "computed": {
+    "net_kg": "23",
+    "total_inr": "460.00"
+  },
+  "issues": [],
+  "can_confirm": false,
+  "readback_text": "ಕಾಗದ. ಒಟ್ಟು ತೂಕ ಎರಡು ಐದು ಕಿಲೋಗ್ರಾಂ. ಚೀಲದ ತೂಕ ಎರಡು ಕಿಲೋಗ್ರಾಂ. ನಿವ್ವಳ ತೂಕ ಎರಡು ಮೂರು ಕಿಲೋಗ್ರಾಂ. ಪ್ರತಿ ಕಿಲೋಗ್ರಾಂಗೆ ಎರಡು ಸೊನ್ನೆ ರೂಪಾಯಿ. ಒಟ್ಟು ನಾಲ್ಕು ಆರು ಸೊನ್ನೆ ದಶಮಾಂಶ ಸೊನ್ನೆ ಸೊನ್ನೆ ರೂಪಾಯಿ. ದಯವಿಟ್ಟು ತೂಕ ಮತ್ತು ದರ ಪರಿಶೀಲಿಸಿ.",
+  "speech_evidence": {
+    "model": "prisma-v2.5",
+    "request_id": "01a16735-5917-7fbc-83e2-722135975e25",
+    "elapsed_ms": 491,
+    "audio_sha256": "1f02222b0c372453f4196565feb4f60439930f47c78848502aa60fb0cd354b37",
+    "audio_bytes": 199758,
+    "processed_at_utc": "2026-10-23T05:21:51.974181+00:00"
+  },
+  "readback_evidence": {
+    "model": "timbre-v2.5",
+    "voice": "Saanvi",
+    "generated_for_revision": 1,
+    "audio_sha256": "7021b105f204fab0f5fb05924cf0a0bb39bcec1b0b5271f96704a9143d284aa9",
+    "audio_bytes": 652844
+  },
+  "digest": "2e9e3e7e37eceb559d2510bd1d0b328f9ba87ad90e91632749ffaaefcfbeb7e9",
+  "notice": "Operator-confirmed record; no payment, identity, scale or market price verified.",
+  "software": "TaulSaathi research prototype 0.1"
+}

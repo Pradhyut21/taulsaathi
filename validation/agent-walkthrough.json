@@ -1,0 +1,99 @@
+{
+  "kind": "agent_scripted_http_walkthrough",
+  "actual_buyer_or_seller_feedback": false,
+  "speech_service_calls": 0,
+  "human_usability_or_time_savings_measured": false,
+  "checks": [
+    {
+      "task": "Kannada digits",
+      "passed": true,
+      "observation": {
+        "net_kg": "23",
+        "total_inr": "460.00"
+      }
+    },
+    {
+      "task": "Decimal and half kilogram",
+      "passed": true,
+      "observation": {
+        "net_kg": "12",
+        "total_inr": "168.00"
+      }
+    },
+    {
+      "task": "Missing rate unit",
+      "passed": true,
+      "observation": {
+        "issues": [
+          "Review extra words after rate_inr_per_kg: 14",
+          "Could not safely parse rate_inr_per_kg; say a labelled number and explicit unit.",
+          "Unassigned digits remain in the transcript. Review the transcript before confirming.",
+          "Unassigned words remain in the transcript. Check for cancellation, corrections or another item.",
+          "Provide a positive INR-per-kg rate."
+        ]
+      }
+    },
+    {
+      "task": "Conflicting rate held",
+      "passed": true,
+      "observation": {
+        "issues": [
+          "Conflicting rate_inr_per_kg values. Choose the intended value explicitly.",
+          "Provide a positive INR-per-kg rate."
+        ]
+      }
+    },
+    {
+      "task": "Field edit preserves ambiguity warning",
+      "passed": true,
+      "observation": {
+        "issues": [
+          "Conflicting rate_inr_per_kg values. Choose the intended value explicitly."
+        ]
+      }
+    },
+    {
+      "task": "Reviewed correction and export",
+      "passed": true,
+      "observation": {
+        "amount": "345.00",
+        "export_http_status": 200
+      }
+    },
+    {
+      "task": "Changed confirmed amount blocked",
+      "passed": true,
+      "observation": {
+        "amount": "368.00",
+        "export_http_status": 400,
+        "stale_confirm_http_status": 400
+      }
+    },
+    {
+      "task": "Adversarial instruction held",
+      "passed": true,
+      "observation": {
+        "transcript": "paper, net - fifty five kg, rate thirty per kg",
+        "issues": [
+          "Could not safely parse net_kg; say a labelled number and explicit unit.",
+          "Unassigned number words remain in the transcript. Resolve them explicitly.",
+          "Unassigned words remain in the transcript. Check for cancellation, corrections or another item.",
+          "Unassigned symbols remain in the transcript. Review currency, arithmetic or cancellation marks.",
+          "Provide net kg, or both gross kg and tare kg. No weight is assumed."
+        ]
+      }
+    },
+    {
+      "task": "Adversarial instruction held",
+      "passed": true,
+      "observation": {
+        "transcript": "paper, net 2 kg, rate 20 rupees per kg; ❌",
+        "issues": [
+          "Unassigned symbols remain in the transcript. Review currency, arithmetic or cancellation marks."
+        ]
+      }
+    }
+  ],
+  "passed": 9,
+  "total": 9
+}

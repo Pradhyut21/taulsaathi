@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "purpose": "Five fictional transaction scripts for an initial live Gnani check. These are scripts, not audio recordings or completed experiments.",
+  "recording_instructions": [
+    "Use fictional materials, quantities and prices only. Do not record customers or identifiers.",
+    "Read each script into a short WAV file (30 seconds maximum); save to the declared wav path or update it.",
+    "Change audio_provenance from unrecorded to human_read_fictional_prompt or tts_generated only after making the file. Human speech and generated speech must stay distinguishable.",
+    "Label conditions accurately. The initial clean recordings do not establish performance on noisy real telephony.",
+    "Have a fluent Kannada speaker verify what was actually spoken and the intended numbers. The gold values below describe fictional intended transactions.",
+    "Run with --limit 1 first. There are no automatic retries. Optional --tts adds separate synthesis calls."
+  ],
+  "clips": [
+    {
+      "id": "kn-clear-25-2-20",
+      "language": "kn-IN",
+      "wav": "recordings/kn-clear.wav",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "unrecorded",
+      "condition": "clean prompt; actual recording condition to be supplied",
+      "prompt": "ಕಾಗದ, ಒಟ್ಟು ಇಪ್ಪತ್ತೈದು ಕೆಜಿ, ಚೀಲ ಎರಡು ಕೆಜಿ, ದರ ಇಪ್ಪತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "20"
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": "460.00"
+        },
+        "must_block": false
+      }
+    },
+    {
+      "id": "kn-decimal-and-half",
+      "language": "kn-IN",
+      "wav": "recordings/kn-decimal.wav",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "unrecorded",
+      "condition": "decimal and half; actual recording condition to be supplied",
+      "prompt": "ಕಾಗದ, ಒಟ್ಟು ೧೨.೫ ಕೆಜಿ, ಚೀಲ ಅರ್ಧ ಕೆಜಿ, ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "12.5",
+          "tare_kg": "0.5",
+          "rate_inr_per_kg": "14"
+        },
+        "computed": {
+          "net_kg": "12",
+          "total_inr": "168.00"
+        },
+        "must_block": false
+      }
+    },
+    {
+      "id": "en-fifteen-not-fifty",
+      "language": "en-IN",
+      "wav": "recordings/en-fifteen.wav",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "unrecorded",
+      "condition": "fifteen/fifty confusion target; actual recording condition to be supplied",
+      "prompt": "Iron, gross twenty five kg, tare two kg, rate fifteen rupees per kg.",
+      "gold": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "15"
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": "345.00"
+        },
+        "must_block": false
+      }
+    },
+    {
+      "id": "kn-en-explicit-correction",
+      "language": "kn-IN",
+      "wav": "recordings/kn-correction.wav",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "unrecorded",
+      "condition": "code-mixed correction; actual recording condition to be supplied",
+      "prompt": "ಕಬ್ಬಿಣ, gross twenty five kg, tare two kg, rate fifty rupees per kg ಅಲ್ಲ fifteen rupees per kg.",
+      "gold": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "15"
+        },
+        "must_block": true
+      },
+      "note": "Intended rate is 15 after correction. Conservative parser may retain the earlier candidate 50 and block; report that mismatch openly, then test explicit human correction separately."
+    },
+    {
+      "id": "en-missing-rate-unit",
+      "language": "en-IN",
+      "wav": "recordings/en-missing-unit.wav",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "unrecorded",
+      "condition": "missing unit; actual recording condition to be supplied",
+      "prompt": "Paper, gross twenty five kg, tare two kg, rate twenty.",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": null
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": null
+        },
+        "must_block": true
+      }
+    }
+  ]
+}

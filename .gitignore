@@ -1,0 +1,23 @@
+# Local credentials and runtime state
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*credentials*.json
+*secret*.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+.hyperframes/
+.media/
+work/
+browser/
+live-browser/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

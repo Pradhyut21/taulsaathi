@@ -1,0 +1,173 @@
+{
+  "kind": "synthetic_development_clips_only",
+  "clips": [
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಾಗದ. ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆಜಿ. ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "12.5",
+          "tare_kg": "0.5",
+          "rate_inr_per_kg": "14"
+        },
+        "computed": {
+          "net_kg": "12",
+          "total_inr": "168.00"
+        },
+        "must_block": false
+      },
+      "provider_original_sha256": "8b28de2e9068891ba90f7a880e482d31d83119c3c64cc7465363d02468aa6144",
+      "id": "kn-decimal-clean",
+      "input": {
+        "filename": "kn-decimal-clean.wav",
+        "sha256": "ada397d9dbd63c0744a643ece46d4b87058cf5e77f09bf4f518ca88acf21b7a4",
+        "bytes": 209998,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 6.56
+      },
+      "transform": {
+        "type": "provider_tts_normalized_to_pcm16_mono_16khz_by_root",
+        "additional_noise": false
+      }
+    },
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಬ್ಬಿಣ. ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಎರಡು ಕೆಜಿ. ದರ ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ. ಅಲ್ಲ. ದರ ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "50"
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": "1150.00"
+        },
+        "must_block": true
+      },
+      "provider_original_sha256": "bff63cab3f7822d13f378d5b74131f9f19cfb6ac5913e36f88860c8e3418e65e",
+      "id": "kn-correction-clean",
+      "input": {
+        "filename": "kn-correction-clean.wav",
+        "sha256": "f7bd273c6c2c17241b34f7f9d903c613ce183f9f3820f9435aca24427b3fdc75",
+        "bytes": 271438,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 8.48
+      },
+      "transform": {
+        "type": "provider_tts_normalized_to_pcm16_mono_16khz_by_root",
+        "additional_noise": false
+      }
+    },
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಾಗದ. ಒಟ್ಟು ತೂಕ ಹನ್ನೆರಡು ಪಾಯಿಂಟ್ ಐದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಅರ್ಧ ಕೆಜಿ. ದರ ಹದಿನಾಲ್ಕು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "paper",
+          "gross_kg": "12.5",
+          "tare_kg": "0.5",
+          "rate_inr_per_kg": "14"
+        },
+        "computed": {
+          "net_kg": "12",
+          "total_inr": "168.00"
+        },
+        "must_block": false
+      },
+      "provider_original_sha256": "8b28de2e9068891ba90f7a880e482d31d83119c3c64cc7465363d02468aa6144",
+      "id": "kn-decimal-noise10db",
+      "input": {
+        "filename": "kn-decimal-noise10db.wav",
+        "sha256": "b2c626eefd29773528d70019eb482559fdb300848732e68e8cdd593e823bee36",
+        "bytes": 209964,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 6.56
+      },
+      "transform": {
+        "type": "simulated_additive_white_gaussian_noise",
+        "pseudorandom_seed": 23261001,
+        "target_whole_clip_rms_snr_db": 10,
+        "measured_whole_clip_rms_snr_db": 9.995370110525698,
+        "signal_rms_pcm_units": 3965.481408526832,
+        "noise_target_std_pcm_units": 1253.9953269997438,
+        "uniform_peak_normalization_gain": 1.0,
+        "clipped_samples": 0,
+        "sample_rate_changed": false,
+        "telephony_codec_applied": false,
+        "note": "Seeded synthetic white noise; not recorded ambient noise, human speech or real telephony.",
+        "source_normalized_sha256": "ada397d9dbd63c0744a643ece46d4b87058cf5e77f09bf4f518ca88acf21b7a4"
+      }
+    },
+    {
+      "language": "kn-IN",
+      "scenario_provenance": "fictional",
+      "audio_provenance": "gnani_tts_generated",
+      "natural_human_speech": false,
+      "held_out": false,
+      "real_telephony": false,
+      "intended_script": "ಕಬ್ಬಿಣ. ಒಟ್ಟು ತೂಕ ಇಪ್ಪತ್ತೈದು ಕೆಜಿ. ಚೀಲದ ತೂಕ ಎರಡು ಕೆಜಿ. ದರ ಹದಿನೈದು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ. ಅಲ್ಲ. ದರ ಐವತ್ತು ರೂಪಾಯಿ ಪ್ರತಿ ಕೆಜಿ.",
+      "gold": {
+        "fields": {
+          "material": "iron",
+          "gross_kg": "25",
+          "tare_kg": "2",
+          "rate_inr_per_kg": "50"
+        },
+        "computed": {
+          "net_kg": "23",
+          "total_inr": "1150.00"
+        },
+        "must_block": true
+      },
+      "provider_original_sha256": "bff63cab3f7822d13f378d5b74131f9f19cfb6ac5913e36f88860c8e3418e65e",
+      "id": "kn-correction-noise10db",
+      "input": {
+        "filename": "kn-correction-noise10db.wav",
+        "sha256": "318c8d8e6ed8cce0e606671c915eb8f02034039a7cf7d5da2e79ecdbe302719c",
+        "bytes": 271404,
+        "sample_rate_hz": 16000,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "duration_seconds": 8.48
+      },
+      "transform": {
+        "type": "simulated_additive_white_gaussian_noise",
+        "pseudorandom_seed": 23261002,
+        "target_whole_clip_rms_snr_db": 10,
+        "measured_whole_clip_rms_snr_db": 10.02719451448969,
+        "signal_rms_pcm_units": 3783.6790178881242,
+        "noise_target_std_pcm_units": 1196.5043631515448,
+        "uniform_peak_normalization_gain": 1.0,
+        "clipped_samples": 0,
+        "sample_rate_changed": false,
+        "telephony_codec_applied": false,
+        "note": "Seeded synthetic white noise; not recorded ambient noise, human speech or real telephony.",
+        "source_normalized_sha256": "f7bd273c6c2c17241b34f7f9d903c613ce183f9f3820f9435aca24427b3fdc75"
+      }
+    }
+  ]
+}
