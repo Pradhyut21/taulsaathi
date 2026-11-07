@@ -1,0 +1,155 @@
+1
+00:00:00,100 --> 00:00:02,048
+Hi, let me show you TaulSaathi.
+
+2
+00:00:02,208 --> 00:00:06,773
+It’s a Kannada and English prototype for recording a small scrap
+transaction.
+
+3
+00:00:06,933 --> 00:00:13,547
+The problem is simple: if fifteen is heard as fifty, the
+multiplication can be correct while the receipt is wrong.
+
+4
+00:00:13,707 --> 00:00:16,971
+So this app makes the numbers visible before you confirm them.
+
+5
+00:00:17,131 --> 00:00:18,709
+Here is the capture panel.
+
+6
+00:00:18,869 --> 00:00:23,563
+You can type a supported transaction or upload a short WAV
+recording.
+
+7
+00:00:23,723 --> 00:00:26,091
+Gnani Prisma handles speech to text.
+
+8
+00:00:26,251 --> 00:00:31,691
+This saved example used generated Kannada speech and an actual API
+request.
+
+9
+00:00:31,851 --> 00:00:34,987
+It’s a fictional transaction, not a customer recording.
+
+10
+00:00:35,147 --> 00:00:38,709
+The paper weighs twenty-five kilograms including its container.
+
+11
+00:00:38,869 --> 00:00:40,747
+The container weighs two kilograms.
+
+12
+00:00:40,907 --> 00:00:46,965
+That leaves twenty-three kilograms at twenty rupees per kilogram,
+giving four hundred and sixty rupees.
+
+13
+00:00:47,125 --> 00:00:52,373
+The app keeps the transcript alongside the fields, so I can inspect
+where each value came from.
+
+14
+00:00:52,533 --> 00:00:56,096
+Gnani Timbre reads the critical values back in Kannada.
+
+15
+00:00:56,256 --> 00:00:58,603
+Here is the audio returned for this record.
+
+16
+00:01:13,163 --> 00:01:16,981
+Now I’ll switch to a separate typed example with conflicting rates.
+
+17
+00:01:17,141 --> 00:01:19,893
+Both fifteen and fifty appear in the transcript.
+
+18
+00:01:20,053 --> 00:01:23,360
+The app keeps that conflict visible and blocks confirmation.
+
+19
+00:01:23,520 --> 00:01:26,357
+It does not silently guess which price was intended.
+
+20
+00:01:26,517 --> 00:01:29,973
+I need to check the agreement and enter an explicit correction.
+
+21
+00:01:30,133 --> 00:01:34,955
+For this fictional example, I choose fifteen rupees per kilogram and
+record why.
+
+22
+00:01:35,115 --> 00:01:37,632
+Applying the correction creates a new revision.
+
+23
+00:01:37,792 --> 00:01:40,075
+The transcript warning still needs review.
+
+24
+00:01:40,235 --> 00:01:47,573
+Once I’ve checked the full transcript and the calculated amount, I
+can confirm that revision and download its JSON record.
+
+25
+00:01:47,733 --> 00:01:51,168
+Watch what happens if I change the rate after confirmation.
+
+26
+00:01:51,328 --> 00:01:54,997
+The amount updates, but the old confirmation is invalidated.
+
+27
+00:01:55,157 --> 00:01:57,525
+The changed record needs a fresh review.
+
+28
+00:01:57,685 --> 00:02:03,531
+The correction history preserves what changed; an earlier approval
+cannot authorize a different amount.
+
+29
+00:02:03,691 --> 00:02:09,109
+The prototype uses Python, a small browser interface, and Gnani
+speech APIs.
+
+30
+00:02:09,269 --> 00:02:12,149
+Decimal arithmetic handles the calculation.
+
+31
+00:02:12,309 --> 00:02:17,664
+The documented version passed one hundred and ten offline tests and
+fifty text cases.
+
+32
+00:02:17,824 --> 00:02:21,024
+Those are software checks, not speech accuracy scores.
+
+33
+00:02:21,184 --> 00:02:26,560
+Human Kannada recordings and buyer or seller feedback are still the
+next validation step.
+
+34
+00:02:26,720 --> 00:02:29,835
+That’s TaulSaathi: say it, check it, and keep a record.
+
+35
+00:02:29,995 --> 00:02:32,811
+The source and evidence are available on GitHub.
+
+36
+00:02:32,971 --> 00:02:34,251
+Thanks for watching.

@@ -1,5 +1,7 @@
 # TaulSaathi
 
+[Watch the narrated 2–3 minute app presentation](https://pradhyut21.github.io/taulsaathi/demo/) · [Download the video](media/TaulSaathi-presentation.mp4)
+
 ### Fifteen or fifty? Check the number before keeping the receipt.
 
 A correct multiplication can still use the wrong weight or rate. **TaulSaathi** is a small Kannada + English prototype for scrap-weighing conversations: speech becomes a draft, uncertain numbers stay visible, and a correction requires a new review.
